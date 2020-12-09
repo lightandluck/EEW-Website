@@ -1,0 +1,20 @@
+name: Github Pages Deploy
+on:
+  push:
+    branches:
+      - dev
+      
+jobs:
+  uploadFTP:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: 'gh-pages'
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@3.1.1
+        with:
+          ftp-server: ${{ secrets.ftpserver }}
+          ftp-username: ${{ secrets.ftpuser }}
+          ftp-password: ${{ secrets.ftppassword }}
+          git-ftp-args: --insecure
