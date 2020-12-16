@@ -1,8 +1,7 @@
 name: Github Pages Deploy
 on:
-  push:
-    branches:
-      - dev
+  release:
+    types: [published]
       
 jobs:
   uploadFTP:
