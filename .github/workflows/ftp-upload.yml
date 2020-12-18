@@ -16,4 +16,4 @@ jobs:
           server: ftp.environmentalenforcementwatch.org
           username: stagingftp@environmentalenforcementwatch.org
           password: ${{ secrets.ftppassword }}
-          protocol: ftpes
+          protocol: ftps
