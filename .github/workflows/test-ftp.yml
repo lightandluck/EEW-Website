@@ -15,4 +15,4 @@ jobs:
         url: "ftpes://ftp.environmentalenforcementwatch.org"
         user: ${{ secrets.ftpuser }}
         password: ${{ secrets.ftppassword }}
-        options: --auto-init --force --verbose --insecure
+        options: --auto-init --force --verbose --insecure --all
