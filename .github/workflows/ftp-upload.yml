@@ -7,15 +7,13 @@ jobs:
   uploadFTP:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v1
         with:
           ref: 'gh-pages'
-      - name: 📂 Sync files
-        uses: SamKirkland/FTP-Deploy-Action@4.0.0
+      - name: FTP upload
+        uses: sebastianpopp/git-ftp-action@releases/v3
         with:
-          server: ftp.environmentalenforcementwatch.org
-          username: stagingftp@environmentalenforcementwatch.org
+          url: ${{ secrets.ftpserver }}
+          user: ${{ secrets.ftpusername }}
           password: ${{ secrets.ftppassword }}
-          protocol: ftps
-          security: loose
-          log-level: verbose
+          options: --insecure --all
