@@ -16,4 +16,4 @@ jobs:
         ftp-server: "ftpes://ftp.environmentalenforcementwatch.org"
         ftp-username: ${{ secrets.ftpuser }}
         ftp-password: ${{ secrets.ftppassword }}
-        git-ftp-args: "--insecure --dry-run"
+        git-ftp-args: "--dry-run"
