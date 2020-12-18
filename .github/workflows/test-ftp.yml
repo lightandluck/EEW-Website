@@ -12,7 +12,7 @@ jobs:
     - name: git-ftp push
       uses: sebastianpopp/git-ftp-action@releases/v3
       with:
-        url: "ftpes://ftp.environmentalenforcementwatch.org"
+        url: ftpes://ftp.environmentalenforcementwatch.org
         user: ${{ secrets.ftpuser }}
         password: ${{ secrets.ftppassword }}
         options: --auto-init --force --verbose --insecure --all
