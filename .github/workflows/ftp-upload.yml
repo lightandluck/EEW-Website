@@ -17,3 +17,4 @@ jobs:
           username: stagingftp@environmentalenforcementwatch.org
           password: ${{ secrets.ftppassword }}
           protocol: ftps
+          security: loose
