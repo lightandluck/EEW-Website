@@ -13,6 +13,7 @@ jobs:
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
-          server: ${{ secrets.ftpserver }}
-          username: ${{ secrets.ftpuser }}
+          server: ftp.environmentalenforcementwatch.org
+          username: stagingftp@environmentalenforcementwatch.org
           password: ${{ secrets.ftppassword }}
+          protocol: ftpes
